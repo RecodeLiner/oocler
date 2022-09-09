@@ -3,7 +3,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-fun main(args: Array<String>) {
+fun main() {
     while (true) {
         val dateFormat: DateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
         val date = Date()
