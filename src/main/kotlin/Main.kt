@@ -8,10 +8,9 @@ fun main(args: Array<String>) {
         val dateFormat: DateFormat = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
         val date = Date()
         val dateval = dateFormat.format(date).split(" ")
-        val currentdate = dateval[0]
-        val currenttime = dateval[1]
+        val temp = CurrentTime(dateval[0], dateval[1])
 
-        var res = Res(currentdate, currenttime, 0, 0, 0, 0, 0)
+        var res = Res(temp.date, temp.time, 0, 0, 0, 0, 0)
 
         val tempres = ooklacli()
         if (tempres != null) {
@@ -21,3 +20,8 @@ fun main(args: Array<String>) {
         Thread.sleep(600000)
     }
 }
+
+data class CurrentTime(
+    var date: String,
+    var time: String
+)
