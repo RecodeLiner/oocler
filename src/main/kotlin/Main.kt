@@ -14,7 +14,7 @@ fun main() {
 
         val tempres = ooklacli()
         if (tempres != null) {
-            res = jsonparser(tempres)
+            res = jsonparser(tempres, temp)
         }
         postAtFile(res)
         Thread.sleep(600000)
